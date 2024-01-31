@@ -1,12 +1,17 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Section from "../components/Section";
+import TestMonals from "../components/TestMonals";
 
 const Page4 = () => {
   return (
     <Layout>
-       <div style={{height: '80%', margin: '0px'}}> 
-        Page4
-        </div>
+       
+       {/* Top section */}
+       <Section />
+
+       {/* Test monals */}
+       {/* <TestMonals /> */}
     </Layout>
   );
 };

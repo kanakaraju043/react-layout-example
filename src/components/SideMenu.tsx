@@ -22,9 +22,8 @@ const navLinks = [
 
 const SideMenu = () => {
   return (
-    <div
+    <div className="bg-gray-600"
       style={{
-        backgroundColor: "blue",
         padding: 2,
         borderRadius: 2,
         display: "flex",
