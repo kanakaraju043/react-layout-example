@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import SideMenu from "./SideMenu";
 import Header from "./Header";
 import Footer from "./Footer";
+import Announcement from "./Announcement";
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,16 +10,17 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div
+    <div 
       style={{
         backgroundColor: "red",
         display: "flex",
         color: "white",
         padding: 3,
         gap: 3,
-        overflowY: "hidden",
-        margin: '0px',
+        overflowY:'hidden',
+        margin: "0px",
         height: "100vh",
+        
       }}
     >
       <SideMenu />
@@ -26,9 +28,11 @@ const Layout = ({ children }: LayoutProps) => {
         style={{
           width: "100%",
           overflowY: "scroll",
-          backgroundColor: "gray"
+          backgroundColor: "gray",
         }}
-      > <Header />
+      >
+        <Header />
+        <Announcement />
         {children}
         <Footer />
       </div>

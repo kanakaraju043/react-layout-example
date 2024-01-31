@@ -2,8 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 const navLinks = [
   {
-    name: "Page1",
+    name: "Home",
     link: "/",
+  },
+
+  {
+    name: "Blog",
+    link: "/blog",
+  },
+  {
+    name: "Article",
+    link: "/article1",
+  },
+  {
+    name: "Page1",
+    link: "/page1",
   },
 
   {
@@ -22,7 +35,8 @@ const navLinks = [
 
 const SideMenu = () => {
   return (
-    <div className="bg-gray-600"
+    <div
+      className="bg-gray-600"
       style={{
         padding: 2,
         borderRadius: 2,
@@ -31,34 +45,29 @@ const SideMenu = () => {
         flexDirection: "column",
         gap: 10,
 
-        justifyContent: 'center',
+        textAlign:'left',
+        justifyContent: "center",
         alignItems: "center",
         // justifyContent: "space-between",
       }}
     >
-     
-          {navLinks.map((item) => (
-            <Link
-              key={item.name}
-              to={item.link}
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 2,
-                  color: "white",
-                  flexDirection: "column",
-                  textDecoration: "none",
-                }}
-              >
-                <div>{item.name}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-   
+      {navLinks.map((item) => (
+        <Link key={item.name} to={item.link} style={{ textDecoration: "none" }}>
+          <div
+            style={{
+              display: "flex",
+            //   alignItems: "center",
+              gap: 2,
+              color: "white",
+              flexDirection: "column",
+              textDecoration: "none",
+            }}
+          >
+            <div>{item.name}</div>
+          </div>
+        </Link>
+      ))}
+    </div>
   );
 };
 
