@@ -8,7 +8,8 @@ const ArticlePage = () => {
           id: 1,
           title:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia corrupti corporis doloribus excepturi tempore nobis mollitia, rem blanditiis alias voluptates molestias omnis ex. Illum molestias corporis molestiae dignissimos cupiditate sint.",
-          colorClass: 'bg-blue-500'
+          colorClass: 'bg-blue-500',
+
             
         },
         {
@@ -77,7 +78,7 @@ const ArticlePage = () => {
       ];
   return (
    <Layout>
-    <div className=" grid grid-cols-1  gap-4 py-3 mx-32 overflow-y-scroll">
+    <div className=" grid grid-cols-1  gap-4 py-3  mx-32 overflow-y-scroll">
         {articles.map((article) => (
           <ArticleCard
             key={article?.id}

@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
         overflowY:'hidden',
         margin: "0px",
         height: "100vh",
-        
+        position: 'fixed'
       }}
     >
       <SideMenu />
@@ -29,6 +29,7 @@ const Layout = ({ children }: LayoutProps) => {
           width: "100%",
           overflowY: "scroll",
           backgroundColor: "gray",
+          // position: 'absolute'
         }}
       >
         <Header />
